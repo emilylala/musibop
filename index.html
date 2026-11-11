@@ -72,7 +72,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .meter .ok{background:linear-gradient(90deg,#43A75E,#9DC4E6,#B1A9D8,#F5D86A,#EDAFCB,#E9762C)}
 .meter .wait{background:repeating-linear-gradient(45deg,#F5D86A 0 6px,#FBEBB0 6px 12px)}
 .meta{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
-.note{background:var(--cream);border-radius:12px;padding:10px 12px;font-size:14px;white-space:pre-line}
+.note{background:var(--cream);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.75;white-space:pre-line}
 .warn{color:#A1401F;font-weight:700}
 
 /* task cards — drawn like MusiBop cards */
@@ -112,27 +112,34 @@ details summary{cursor:pointer;font-weight:700;color:var(--navy)}
 .fhead img{height:72px;width:auto}
 .fhead h2{font-size:22px;font-weight:900}
 form{display:grid;gap:18px}
-fieldset{border:0;margin:0;padding:0;display:grid;gap:8px;min-width:0}
-legend,.q{font-weight:700;color:var(--ink);padding:0;margin-bottom:6px}
+fieldset{border:0;margin:0;padding:0;display:grid;gap:12px;min-width:0}
+legend,.q{font-weight:700;color:var(--ink);padding:0;margin-bottom:10px;line-height:1.55}
 legend small,.q small{font-weight:400;color:var(--muted)}
 input[type=email],input[type=text],input[type=url],input[type=number],input[type=date],select,textarea{width:100%;border:2px solid var(--line);border-radius:12px;background:var(--paper);padding:10px 12px}
 textarea{min-height:84px;resize:vertical}
-fieldset.subq{margin-left:14px;border-left:3px solid var(--sun);padding-left:10px}
-.fsub{font-size:17px;margin:14px 0 0;color:var(--ink)}
+fieldset.subq{margin-left:14px;border-left:3px solid var(--sun);padding-left:12px}
+.fprog{justify-self:start;font-weight:700;color:var(--ink);font-size:14px;background:var(--cream);border:2px solid var(--line);border-radius:999px;padding:6px 14px;margin-top:4px}
+.fprog b{font-family:var(--f-en)}
+.fstep{display:grid;gap:26px}
+.fstep > .err:empty{display:none}
+.fnav{display:flex;gap:12px;justify-content:space-between;margin-top:6px;padding-top:18px;border-top:2px dashed var(--line)}
+.fnav .btn:only-child{margin-left:auto}
+.fsub{font-size:18px;font-weight:900;margin:10px 0 -8px;padding-top:22px;border-top:2px dashed var(--line);color:var(--navy)}
+.fstep > .fsub:first-child{border-top:0;padding-top:0;margin-top:0}
 .nps .chip span{min-width:36px;text-align:center;padding:5px 8px}
 .talk{display:grid;gap:10px;text-align:left;border-top:2px dashed var(--line);padding-top:14px;margin-top:6px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips{display:flex;flex-wrap:wrap;gap:10px 8px}
 .chip{position:relative}
 .chip input{position:absolute;opacity:0;inset:0;cursor:pointer}
-.chip span{display:inline-block;border:2px solid var(--line);border-radius:999px;padding:5px 12px;background:var(--paper);font-size:14px;cursor:pointer;user-select:none}
+.chip span{display:inline-block;border:2px solid var(--line);border-radius:999px;padding:7px 14px;line-height:1.4;background:var(--paper);font-size:14px;cursor:pointer;user-select:none}
 .chip span b{font-family:var(--f-en);font-weight:700;margin-right:4px}
 .chip input:checked+span{background:var(--sun);font-weight:700}
 .chip input:focus-visible+span{outline:3px solid var(--nose);outline-offset:2px}
-.grp{font-size:12px;font-family:var(--f-en);font-weight:700;letter-spacing:.08em;color:var(--muted);margin-top:4px}
+.grp{font-size:12px;font-family:var(--f-en);font-weight:700;letter-spacing:.08em;color:var(--muted);margin-top:8px}
 .scale{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px}
 .scale .chip span{display:block;text-align:center;border-radius:12px;padding:6px 2px;font-size:13px;line-height:1.3}
 .scale .chip span b{display:block;font-size:18px;margin:0}
-.check{display:flex;gap:10px;align-items:flex-start;font-size:15px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.6}
 .check input{width:20px;height:20px;margin-top:3px;flex:none;accent-color:var(--navy)}
 .file{border:2px dashed var(--line);border-radius:14px;padding:14px;background:var(--cream);display:grid;gap:8px}
 .file input[type=file]{font-size:14px;max-width:100%}
@@ -141,7 +148,7 @@ fieldset.subq{margin-left:14px;border-left:3px solid var(--sun);padding-left:10p
 .feature{background:#FCEFB8;border:2px solid var(--line);border-radius:14px;padding:12px 14px;display:grid;gap:10px}
 .err{color:#B3261E;font-weight:700;font-size:14px}
 .err:empty{display:none}
-.branch{display:grid;gap:18px;border-left:4px solid var(--sun);padding-left:14px}
+.branch{display:grid;gap:22px;border-left:4px solid var(--sun);padding-left:16px}
 .opts{display:grid;gap:10px}
 .opt{position:relative;display:block;cursor:pointer}
 .opt input{position:absolute;opacity:0;inset:0;cursor:pointer}
@@ -330,7 +337,7 @@ fieldset.subq{margin-left:14px;border-left:3px solid var(--sun);padding-left:10p
 .wscard input:focus-visible+span{outline:3px solid var(--nose);outline-offset:2px}
 
 .boardimg{display:grid;gap:6px;text-decoration:none;color:var(--muted);font-size:13px}
-.price{margin:8px 0 0;font-size:14px;color:var(--muted)}
+.price{margin:0;font-size:14px;color:var(--muted)}
 .price b{color:var(--ink);font-size:16px;margin-left:4px}
 .boardimg img{width:100%;border:2px solid var(--line);border-radius:12px;background:var(--cream)}
 /* ---- 創作練習本翻閱 ---- */
@@ -460,7 +467,7 @@ fieldset.subq{margin-left:14px;border-left:3px solid var(--sun);padding-left:10p
       <div class="meter" role="img" id="h-meter" aria-label="今年點數進度"><div class="ok" id="m-ok"></div><div class="wait" id="m-wait"></div></div>
       <div class="meta"><span id="h-year">今年已獲得 0 / 600 點</span><span id="h-pending">待審核 0 點</span></div>
       <p class="note warn" id="h-expiring" hidden></p>
-      <div class="note">1 點 = 1 元，每筆最多折抵訂單金額的 <b>20%</b>（用 100 點要買滿 500 元、200 點滿 1,000 元、300 點滿 1,500 元），每次最多使用 <b>300 點</b>，可折抵官網購物車結帳的商品（學習單和線上課程不適用）。</div>
+      <div class="note">1 點 = 1 元，每筆最多折抵訂單金額的 <b>20%</b>（用 100 點要買滿 500 元、200 點滿 1,000 元、300 點滿 1,500 元），每次最多使用 <b>300 點</b>，可折抵官網購物車結帳的商品。</div>
       <div class="row"><button class="btn sun" type="button" data-task="redeem">使用點數，取得折扣碼</button></div>
       <div id="h-codes-wrap" hidden><div class="lbl" style="font-weight:700;margin-bottom:6px">我的折扣碼</div><ul class="codes" id="h-codes"></ul></div>
     </div>
@@ -532,8 +539,8 @@ fieldset.subq{margin-left:14px;border-left:3px solid var(--sun);padding-left:10p
           <li>分享我的玩法：被收進配方小幫手，100 點</li>
           <li>每位老師一年最多 600 點，等級越高上限越高（Curio 650、Sparky 700、種子老師 800）；點數獲得一年後到期</li>
           <li>累計成長值：所有參與拿到的點數都會累加，用點數折抵不會減少，也沒有一年上限。成長值決定你的等級：Sono 聆聽家 100、Curio 探險家 350、Sparky 創造家 700、MusiBop 種子老師 1,200（取得資格後，以折扣價報名種子老師培訓，完成培訓即成為種子老師）。每升一級都有升級禮點數和獎勵</li>
-          <li>折扣碼到期前 7 天還沒用，會寄 email 提醒你；每月 1 號也會寄點數小提醒</li>
-          <li>點數限折抵 MusiBop 官網加入購物車結帳的商品（例如卡牌、配件），學習單和線上課程不適用</li>
+          <li>每月 1 號會寄點數小提醒到你的 email</li>
+          <li>點數限折抵 MusiBop 官網加入購物車結帳的商品（例如卡牌、配件）</li>
           <li>上課打卡、每月小挑戰、課堂分享（文字紀錄除外）由米粒看過後入帳；回饋表、文字紀錄、開卡是馬上入帳</li>
         </ol>
         <p class="note" style="margin-top:10px">洋蔥耳保留調整點數規則與活動內容的權利，調整時會在本頁公告。規則調整前已入帳的點數不受影響。</p>
@@ -550,6 +557,8 @@ fieldset.subq{margin-left:14px;border-left:3px solid var(--sun);padding-left:10p
       <p>大約 3–4 分鐘，第一次填完就拿 30 點。你的回答會直接用來改進卡牌、教案和工作坊。</p>
       <div class="note">你的回答不會和你的 email 存在一起，米粒看不到是誰寫的，說實話不影響點數。請避免寫出學生姓名或教室名稱。</div>
       <form id="f-feedback" novalidate>
+        <div class="fprog" id="fb-prog"></div>
+        <div class="fstep" data-title="卡牌使用">
         <fieldset><legend>目前用卡的情況？</legend><div class="chips">
             <label class="chip"><input type="radio" name="fb-use" value="還沒開始用"><span>還沒開始用</span></label>
             <label class="chip"><input type="radio" name="fb-use" value="用過 1–2 次"><span>用過 1–2 次</span></label>
@@ -690,6 +699,10 @@ fieldset.subq{margin-left:14px;border-left:3px solid var(--sun);padding-left:10p
           </div><input type="text" id="fb-adv-other" placeholder="其他想要的進階內容（選填）">
           <label class="q" for="fb-advidea">你希望進階版卡牌適合什麼程度的學生？想加入哪些內容或玩法？ <small>（選填）</small></label><textarea id="fb-advidea"></textarea></fieldset>
 
+        <div class="err" data-ferr></div>
+        <div class="fnav"><button class="btn" type="button" data-fnext>下一步 →</button></div>
+        </div>
+        <div class="fstep" data-title="學習單與工作坊" hidden>
         <h3 class="fsub">學習單</h3>
         <fieldset><legend>你用過 MusiBop 學習單嗎？</legend><div class="chips">
             <label class="chip"><input type="radio" name="fb-sheet" value="已經用過"><span>已經用過</span></label>
@@ -711,6 +724,44 @@ fieldset.subq{margin-left:14px;border-left:3px solid var(--sun);padding-left:10p
             <label class="chip"><input type="checkbox" name="fb-sheetwant" value="目前沒有需求"><span>目前沒有需求</span></label>
           </div><input type="text" id="fb-sheetwant-other" placeholder="其他想要的學習單（選填）"></fieldset>
 
+        <h3 class="fsub">工作坊與進修</h3>
+        <fieldset><legend>你參加過 MusiBop 卡牌工作坊嗎？</legend><div class="chips">
+            <label class="chip"><input type="radio" name="fb-ws" value="有"><span>有</span></label>
+            <label class="chip"><input type="radio" name="fb-ws" value="還沒有"><span>還沒有</span></label>
+        </div></fieldset>
+        <fieldset class="branch" id="fb-ws-yes" hidden><legend>工作坊對你最有幫助的是什麼？ <small>（選填，最多選 2 個）</small></legend><div class="chips" data-max="2" data-only="目前還沒有明顯幫助">
+            <label class="chip"><input type="checkbox" name="fb-wshelp" value="更了解卡牌的用法"><span>更了解卡牌的用法</span></label>
+            <label class="chip"><input type="checkbox" name="fb-wshelp" value="學會聆聽 → 探索 → 創造的完整流程"><span>學會聆聽 → 探索 → 創造的完整流程</span></label>
+            <label class="chip"><input type="checkbox" name="fb-wshelp" value="融入平時教材的使用"><span>融入平時教材的使用</span></label>
+            <label class="chip"><input type="checkbox" name="fb-wshelp" value="實際玩過，更有信心帶學生創作"><span>實際玩過，更有信心帶學生創作</span></label>
+            <label class="chip"><input type="checkbox" name="fb-wshelp" value="和其他老師交流"><span>和其他老師交流</span></label>
+            <label class="chip"><input type="checkbox" name="fb-wshelp" value="目前還沒有明顯幫助"><span>目前還沒有明顯幫助</span></label>
+        </div></fieldset>
+        <fieldset class="branch" id="fb-ws-yes2" hidden><label class="q" for="fb-wsimprove">希望工作坊可以調整或改進之處？ <small>（選填）</small></label><textarea id="fb-wsimprove"></textarea></fieldset>
+        <fieldset><legend>未來你想上哪些工作坊？ <small>（最多選 2 個）</small></legend><div class="chips" data-max="2" data-only="暫時沒有需求">
+            <label class="chip"><input type="checkbox" name="fb-wswant" value="即興伴奏應用（基礎）"><span>即興伴奏應用（基礎）</span></label>
+            <label class="chip"><input type="checkbox" name="fb-wswant" value="即興伴奏應用（進階）"><span>即興伴奏應用（進階）</span></label>
+            <label class="chip"><input type="checkbox" name="fb-wswant" value="ABRSM 創作教學實務"><span>ABRSM 創作教學實務：認識創作音樂能力認證，學習怎麼引導學生創作、準備作品集</span></label>
+            <label class="chip"><input type="checkbox" name="fb-wswant" value="冬夏令營課程設計"><span>冬夏令營課程設計</span></label>
+            <label class="chip"><input type="checkbox" name="fb-wswant" value="從零到一首歌：個人創作實作"><span>從零到一首歌：個人創作實作（從音樂動機、旋律與和弦開始，親手完成一首自己的作品）</span></label>
+            <label class="chip"><input type="checkbox" name="fb-wswant" value="其他"><span>其他</span></label>
+            <label class="chip"><input type="checkbox" name="fb-wswant" value="暫時沒有需求"><span>暫時沒有需求</span></label>
+        </div><input type="text" id="fb-wswant-other" placeholder="其他想上的主題（選填）">
+        <span class="or">以上工作坊由洋蔥耳音樂小學堂獨立規劃，非 ABRSM 官方課程。</span></fieldset>
+        <fieldset><legend>你比較喜歡哪種工作坊形式？ <small>（選填）</small></legend><div class="chips">
+            <label class="chip"><input type="radio" name="fb-wsfmt" value="實體工作坊（現場操作與交流）"><span>實體工作坊（現場操作與交流）</span></label>
+            <label class="chip"><input type="radio" name="fb-wsfmt" value="線上直播（即時互動）"><span>線上直播（即時互動）</span></label>
+            <label class="chip"><input type="radio" name="fb-wsfmt" value="兩種都可以"><span>兩種都可以</span></label>
+        </div></fieldset>
+
+        <div class="err" data-ferr></div>
+        <div class="fnav"><button class="btn light" type="button" data-fprev>← 上一步</button><button class="btn" type="button" data-fnext>下一步 →</button></div>
+        </div>
+        <div class="fstep" data-title="其他想法與新產品" hidden>
+        <h3 class="fsub">其他想法（選填）</h3>
+        <fieldset><label class="q" for="fb-card">有沒有哪張卡你不知道怎麼用，或想看示範？</label><input type="text" id="fb-card" placeholder="填卡號，例如 C06"></fieldset>
+        <fieldset><label class="q" for="fb-msg">其他想法或建議</label><textarea id="fb-msg"></textarea></fieldset>
+        <label class="check"><input type="checkbox" id="fb-quote"><span>洋蔥耳可以不具名引用我寫的文字（例如放在官網）</span></label>
         <h3 class="fsub">新產品調查</h3>
         <p class="note">以下兩項 MusiBop 新產品正在製作中，想先了解老師們的需求。只是調查，不是預購喔！</p>
 
@@ -748,42 +799,9 @@ fieldset.subq{margin-left:14px;border-left:3px solid var(--sun);padding-left:10p
         </div></fieldset>
         </div>
 
-        <h3 class="fsub">工作坊與進修</h3>
-        <fieldset><legend>你參加過 MusiBop 卡牌工作坊嗎？</legend><div class="chips">
-            <label class="chip"><input type="radio" name="fb-ws" value="有"><span>有</span></label>
-            <label class="chip"><input type="radio" name="fb-ws" value="還沒有"><span>還沒有</span></label>
-        </div></fieldset>
-        <fieldset class="branch" id="fb-ws-yes" hidden><legend>工作坊對你最有幫助的是什麼？ <small>（選填，最多選 2 個）</small></legend><div class="chips" data-max="2" data-only="目前還沒有明顯幫助">
-            <label class="chip"><input type="checkbox" name="fb-wshelp" value="更了解卡牌的用法"><span>更了解卡牌的用法</span></label>
-            <label class="chip"><input type="checkbox" name="fb-wshelp" value="學會聆聽 → 探索 → 創造的完整流程"><span>學會聆聽 → 探索 → 創造的完整流程</span></label>
-            <label class="chip"><input type="checkbox" name="fb-wshelp" value="融入平時教材的使用"><span>融入平時教材的使用</span></label>
-            <label class="chip"><input type="checkbox" name="fb-wshelp" value="實際玩過，更有信心帶學生創作"><span>實際玩過，更有信心帶學生創作</span></label>
-            <label class="chip"><input type="checkbox" name="fb-wshelp" value="和其他老師交流"><span>和其他老師交流</span></label>
-            <label class="chip"><input type="checkbox" name="fb-wshelp" value="目前還沒有明顯幫助"><span>目前還沒有明顯幫助</span></label>
-        </div></fieldset>
-        <fieldset class="branch" id="fb-ws-yes2" hidden><label class="q" for="fb-wsimprove">希望工作坊可以調整或改進之處？ <small>（選填）</small></label><textarea id="fb-wsimprove"></textarea></fieldset>
-        <fieldset><legend>未來你想上哪些工作坊？ <small>（最多選 2 個）</small></legend><div class="chips" data-max="2" data-only="暫時沒有需求">
-            <label class="chip"><input type="checkbox" name="fb-wswant" value="即興伴奏應用（基礎）"><span>即興伴奏應用（基礎）</span></label>
-            <label class="chip"><input type="checkbox" name="fb-wswant" value="即興伴奏應用（進階）"><span>即興伴奏應用（進階）</span></label>
-            <label class="chip"><input type="checkbox" name="fb-wswant" value="ABRSM 創作教學實務"><span>ABRSM 創作教學實務：認識創作音樂能力認證，學習怎麼引導學生創作、準備作品集</span></label>
-            <label class="chip"><input type="checkbox" name="fb-wswant" value="冬夏令營課程設計"><span>冬夏令營課程設計</span></label>
-            <label class="chip"><input type="checkbox" name="fb-wswant" value="從零到一首歌：個人創作實作"><span>從零到一首歌：個人創作實作（從音樂動機、旋律與和弦開始，親手完成一首自己的作品）</span></label>
-            <label class="chip"><input type="checkbox" name="fb-wswant" value="其他"><span>其他</span></label>
-            <label class="chip"><input type="checkbox" name="fb-wswant" value="暫時沒有需求"><span>暫時沒有需求</span></label>
-        </div><input type="text" id="fb-wswant-other" placeholder="其他想上的主題（選填）">
-        <span class="or">以上工作坊由洋蔥耳音樂小學堂獨立規劃，非 ABRSM 官方課程。</span></fieldset>
-        <fieldset><legend>你比較喜歡哪種工作坊形式？ <small>（選填）</small></legend><div class="chips">
-            <label class="chip"><input type="radio" name="fb-wsfmt" value="實體工作坊（現場操作與交流）"><span>實體工作坊（現場操作與交流）</span></label>
-            <label class="chip"><input type="radio" name="fb-wsfmt" value="線上直播（即時互動）"><span>線上直播（即時互動）</span></label>
-            <label class="chip"><input type="radio" name="fb-wsfmt" value="兩種都可以"><span>兩種都可以</span></label>
-        </div></fieldset>
-
-        <h3 class="fsub">最後（選填）</h3>
-        <fieldset><label class="q" for="fb-card">有沒有哪張卡你不知道怎麼用，或想看示範？</label><input type="text" id="fb-card" placeholder="填卡號，例如 C06"></fieldset>
-        <fieldset><label class="q" for="fb-msg">其他想法或建議</label><textarea id="fb-msg"></textarea></fieldset>
-        <label class="check"><input type="checkbox" id="fb-quote"><span>洋蔥耳可以不具名引用我寫的文字（例如放在官網）</span></label>
         <div class="err" id="feedback-err"></div>
-        <button class="btn" type="submit">送出回饋</button>
+        <div class="fnav"><button class="btn light" type="button" data-fprev>← 上一步</button><button class="btn" type="submit">送出回饋</button></div>
+        </div>
       </form>
     </div>
   </section>
@@ -1508,6 +1526,42 @@ function wire(){
     } catch (x) { err.textContent = '連線失敗，請檢查網路後再試一次。'; }
     finally { btn.disabled = false; btn.textContent = '開卡'; }
   });
+
+  // 回饋表分三步：每一步按「下一步」時先檢查這一步的必填題
+  function fbErrors() {
+    const use = one('fb-use'), not = use === '還沒開始用', e = [];
+    if (!use) e.push([1, '請先回答「目前用卡的情況」。']);
+    if (use && not && !one('fb-whynot')) e.push([1, '請選「還沒開始用的原因」。']);
+    if (use && !not && !checked('fb-trouble').length) e.push([1, '請選「遇過哪些不方便或困難」，沒有的話選「目前沒有遇到困難」。']);
+    if (!checked('fb-help').length) e.push([1, '請選「什麼最能幫你用卡」。']);
+    if (!one('fb-nps')) e.push([1, '請選「會不會推薦給其他老師」。']);
+    if (use && !not && !one('fb-how')) e.push([1, '請選「你通常怎麼用卡」。']);
+    if (use && !not && !one('fb-most')) e.push([1, '請選「你最常用哪一類卡」。']);
+    if (use && !not && !one('fb-least')) e.push([1, '請選「你最少用到哪一類卡」。']);
+    if (use && !not && !checked('fb-react').length) e.push([1, '請選「學生用卡時的反應」。']);
+    if (!one('fb-ws')) e.push([2, '請回答「有沒有參加過工作坊」。']);
+    if (!checked('fb-wswant').length) e.push([2, '請選「未來想上的工作坊」，沒有的話選「暫時沒有需求」。']);
+    return e;
+  }
+  const fSteps = [...document.querySelectorAll('#f-feedback .fstep')];
+  let fCur = 0;
+  function fGo(i) {
+    fCur = i;
+    fSteps.forEach((st, k) => { st.hidden = k !== i; });
+    document.querySelectorAll('#f-feedback [data-ferr]').forEach(x => { x.textContent = ''; });
+    $('fb-prog').innerHTML = `第 <b>${i + 1}</b> / ${fSteps.length} 步：${fSteps[i].dataset.title}`;
+    $('v-feedback').scrollIntoView({ block: 'start' });
+  }
+  $('f-feedback').addEventListener('click', e => {
+    if (e.target.closest('[data-fprev]')) { fGo(Math.max(0, fCur - 1)); return; }
+    if (e.target.closest('[data-fnext]')) {
+      const err = fbErrors().find(x => x[0] === fCur + 1);
+      if (err) { fSteps[fCur].querySelector('[data-ferr]').textContent = err[1]; return; }
+      fGo(Math.min(fSteps.length - 1, fCur + 1));
+    }
+  });
+  new MutationObserver(() => { if (!$('v-feedback').hidden) fGo(0); }).observe($('v-feedback'), { attributes: true, attributeFilter: ['hidden'] });
+  $('fb-prog').innerHTML = `第 <b>1</b> / ${fSteps.length} 步：${fSteps[0].dataset.title}`;
 
   $('f-feedback').addEventListener('submit', e => { e.preventDefault(); submit(e.target, 'feedback-err', async () => {
     const use = one('fb-use');

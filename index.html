@@ -956,7 +956,8 @@ fieldset.subq{margin-left:14px;border-left:3px solid var(--sun);padding-left:12p
         <div class="err" id="talk-err"></div>
         <button class="btn light" type="submit">好，請米粒聯絡我</button>
       </form>
-      <button class="btn" type="button" data-go="home">回首頁</button>
+      <button class="btn sun" type="button" id="d-next" hidden>下一步：填卡牌回饋表 +50 點</button>
+      <button class="btn" type="button" data-go="home" id="d-home">回首頁</button>
     </div>
   </section>
 
@@ -1250,6 +1251,11 @@ function done(action, res){
     action === 'recipe' ? '米粒老師會看過你的玩法，被收錄後會標上你的名字公開致謝。' :
     action === 'seed' ? '洋蔥耳會用 email 寄培訓資訊和資格價給你，請留意信箱。' :
     res.lineCode ? '' : !p ? '' : (res.review ? '米粒老師確認後就會入帳，可以在「我的紀錄」看到審核狀態。' : '點數已經入帳！');
+  const nextFb = action === 'register' && !(state && state.feedbackDone);
+  $('d-next').hidden = !nextFb;
+  $('d-home').classList.toggle('light', nextFb);
+  $('d-home').textContent = nextFb ? '先逛逛老師專區' : '回首頁';
+  if (nextFb) $('d-msg').textContent = '下一步：花 3–5 分鐘填卡牌回饋表，再拿 50 點，馬上升級「Sono 聆聽家」！';
   const ups = (res.state && res.state.levelUp) || [];
   $('d-lvup').hidden = !ups.length;
   if (ups.length) {
@@ -1395,6 +1401,7 @@ function wire(){
     document.querySelector(`.topic[data-topic="${cb.value}"]`).hidden = !cb.checked;
   }));
   $('logout').onclick = () => signOut();
+  $('d-next').onclick = () => { const c = document.querySelector('.tcard[data-task="feedback"]'); if (c) c.click(); };
   document.querySelectorAll('[data-want]').forEach(b => b.addEventListener('click', async () => {
     b.disabled = true; b.textContent = '登記中…';
     try {

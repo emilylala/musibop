@@ -124,6 +124,11 @@ fieldset.subq{margin-left:14px;border-left:3px solid var(--sun);padding-left:12p
 .fstep > .err:empty{display:none}
 .fnav{display:flex;gap:12px;justify-content:space-between;margin-top:6px;padding-top:18px;border-top:2px dashed var(--line)}
 .fnav .btn:only-child{margin-left:auto}
+.areas span.hasbadge{position:relative}
+.areas i.pbadge{position:absolute;top:-10px;right:-6px;background:#E8483B;color:#fff;font-style:normal;font-size:12px;font-weight:900;line-height:1;padding:5px 8px;border-radius:999px;border:2px solid var(--line);transform:rotate(8deg);box-shadow:0 2px 0 var(--line)}
+.bonus{background:var(--sun);border:2px solid var(--line);border-radius:14px;padding:12px 14px;text-align:center;font-weight:800;font-size:17px;line-height:1.5;box-shadow:0 3px 0 var(--line)}
+.bonus b{font-size:24px;color:var(--ink)}
+.bonus small{display:block;font-size:13px;font-weight:600}
 .perks{background:var(--cream);border:2px solid var(--line);border-radius:14px;padding:14px 16px}
 .perks ul{margin:8px 0 0;padding-left:1.2em;display:grid;gap:6px;line-height:1.6}
 .areas{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;text-align:center}
@@ -404,13 +409,14 @@ fieldset.subq{margin-left:14px;border-left:3px solid var(--sun);padding-left:12p
     <div class="panel">
       <h2>老師你好！👋</h2>
       <p>歡迎來到 MusiBop 老師專區，一起分享教學靈感，讓 MusiBop 越來越好！</p>
+      <div class="bonus">填卡牌回饋表，<b>送 50 點！</b><small>開卡再送 20 點，一進來就有 70 點</small></div>
       <div class="perks"><b>加入就享有 🎁</b><ul>
         <li>開卡送 20 點，填回饋表再送 50 點</li>
         <li>1 點折抵 1 元，滿 100 點可換官網折扣碼</li>
         <li>搶先看新產品，享老師專屬優惠價</li>
       </ul></div>
       <div class="areas"><b>老師專區裡有</b>
-        <span><i class="ic ic-pts"></i>回饋點數站<em>回饋使用建議<br>集點換優惠</em></span><span><i class="ic ic-rc"></i>教案小幫手<small>建置中</small><em>選卡找玩法<br>備課更輕鬆</em></span><span><i class="ic ic-gm"></i>數位遊戲<small>建置中</small><em>互動玩音樂<br>敬請期待</em></span>
+        <span class="hasbadge"><i class="pbadge">+50 點</i><i class="ic ic-pts"></i>回饋點數站<em>填回饋送 50 點<br>集點換優惠</em></span><span><i class="ic ic-rc"></i>教案小幫手<small>建置中</small><em>選卡找玩法<br>備課更輕鬆</em></span><span><i class="ic ic-gm"></i>數位遊戲<small>建置中</small><em>互動玩音樂<br>敬請期待</em></span>
       </div>
       <form id="f-login" novalidate>
         <input type="email" id="login-email" placeholder="you@example.com" autocomplete="email" required>
